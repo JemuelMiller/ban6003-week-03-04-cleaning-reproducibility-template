@@ -91,6 +91,15 @@ def check_no_forbidden_files(config: dict) -> None:
             fail(f'Forbidden file is present and should not be committed: {rel}')
 
 
+def check_generated_files(config: dict) -> None:
+    for rel in config.get('generated_files', []):
+        path = ROOT / rel
+        if not path.is_file():
+            fail(f'Required generated output is missing: {rel}')
+        if path.stat().st_size == 0:
+            fail(f'Required generated output is empty: {rel}')
+
+
 def execute_notebook(path: Path, timeout: int) -> None:
     print(f'Executing {path.relative_to(ROOT)}')
     cmd = [
@@ -161,6 +170,8 @@ def main() -> None:
         for rel in config.get('notebooks', []):
             execute_notebook(ROOT / rel, timeout)
         executed = True
+
+    check_generated_files(config)
 
     for rel in config.get('notebooks', []):
         path = ROOT / rel

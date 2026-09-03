@@ -4,8 +4,12 @@
     "notebooks/week4_github_repro_governance_lab.ipynb"
   ],
   "required_files": [
-    "data/employee_data.csv",
+    "data/raw/employee_data_week3.csv",
     "data/raw/employee_data.csv"
+  ],
+  "generated_files": [
+    "data/processed/employee_data_cleaned_week3.csv",
+    "data/processed/employee_review_copy_no_names.csv"
   ],
   "forbidden_files": [
     ".env"
@@ -16,6 +20,7 @@
   "require_marked_code_outputs": true,
   "check_markdown_placeholders": true,
   "min_marked_code_cells": {
+    "notebooks/week3_data_cleaning_lab.ipynb": 2,
     "notebooks/week4_github_repro_governance_lab.ipynb": 2
   }
 }

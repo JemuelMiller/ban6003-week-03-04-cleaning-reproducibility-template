@@ -14,10 +14,15 @@ Read the Canvas/LMS lab guide before working in this repository. The LMS page co
 - `notebooks/week3_data_cleaning_lab.ipynb`
 - `notebooks/week4_github_repro_governance_lab.ipynb`
 
-## Required Files
+## Required Input Files
 
-- `data/employee_data.csv`
-- `data/raw/employee_data.csv`
+- `data/raw/employee_data_week3.csv` for the Week 3 cleaning lab
+- `data/raw/employee_data.csv` for the Week 4 reproducibility and governance lab
+
+The template does not include completed outputs. Running the notebooks creates:
+
+- `data/processed/employee_data_cleaned_week3.csv`
+- `data/processed/employee_review_copy_no_names.csv`
 
 ## How to Work
 
@@ -26,7 +31,7 @@ Read the Canvas/LMS lab guide before working in this repository. The LMS page co
 3. Install dependencies with `python -m pip install -r requirements.txt` if working locally.
 4. Open the notebooks in the order listed above.
 5. Run cells from top to bottom.
-6. Complete all `Your Turn`, exercise, checkpoint, and reflection sections.
+6. Complete all `Your Turn`, offline assignment, exercise, checkpoint, and reflection sections.
 7. Save your notebooks and required outputs.
 8. Submit your GitHub repository link through Canvas.
 
