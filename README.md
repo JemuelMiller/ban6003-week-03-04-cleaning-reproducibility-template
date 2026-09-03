@@ -14,14 +14,14 @@ Read the Canvas/LMS lab guide before working in this repository. The LMS page co
 - `notebooks/week3_data_cleaning_lab.ipynb`
 - `notebooks/week4_github_repro_governance_lab.ipynb`
 
-## Required Input Files
+## Required Input File
 
-- `data/raw/employee_data_week3.csv` for the Week 3 cleaning lab
-- `data/raw/employee_data.csv` for the Week 4 reproducibility and governance lab
+- `data/raw/employee_data.csv`, the protected raw dataset shared by both labs
 
 The template does not include completed outputs. Running the notebooks creates:
 
 - `data/processed/employee_data_cleaned_week3.csv`
+- `data/processed/employee_data_dictionary.csv`
 - `data/processed/employee_review_copy_no_names.csv`
 
 ## How to Work

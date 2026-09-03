@@ -21,6 +21,7 @@ CONFIG = ROOT / 'tests' / 'assignment_config.json'
 PLACEHOLDER_PHRASES = [
     'type your answer here',
     'write 2-3 sentences here',
+    'write your 3-4 sentence observation here',
     'write your 4-6 sentence response here',
     'write your answers here',
     'your answer here',
@@ -127,7 +128,10 @@ def check_notebook(path: Path, config: dict, executed: bool) -> None:
 
         if ctype == 'markdown' and config.get('check_markdown_placeholders', True):
             # Only enforce placeholders in response-looking cells, not instructional examples.
-            response_like = any(x in lower for x in ['your answer', 'draft', 'summary:', 'business problem:', 'data sources:', 'recommendation'])
+            response_like = any(x in lower for x in [
+                'your answer', 'your observation', 'your response', 'release decision',
+                'draft', 'summary:', 'business problem:', 'data sources:', 'recommendation'
+            ])
             if response_like and any(p in lower for p in PLACEHOLDER_PHRASES):
                 markdown_placeholders.append(idx)
 
